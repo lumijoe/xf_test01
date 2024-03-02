@@ -1,0 +1,178 @@
+/* @media設定＝＝＝1339px以下＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media screen and (max-width: 1339px) {
+  .worktitleimagecoment {
+    display:block;
+  }
+  p.worktitlecoment {
+    padding-top: 40px;
+    text-align: center;
+    line-height: 2;
+    font-size: 12px;
+  }
+}
+/* @media設定＝＝＝1014px以下＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media screen and (max-width: 1014px) {
+  .worktitleimagecoment {
+    display:block;
+  }
+  p.worktitlecoment {
+    padding-top: 40px;
+    text-align: center;
+    line-height: 2;
+    font-size: 12px;
+  }
+  img.itembig {
+    max-width:265px;
+    height: auto;
+  }
+  .items {
+    gap: 20px;
+  }
+}
+/* @media設定＝＝＝615px以下＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media screen and (max-width: 615px) {
+  header {
+    width: 100vw;
+    padding-top: 10px;
+    position: fixed;
+  }
+  .headerLogo h1{
+      font-size:20px;
+      font-weight: 700;
+      letter-spacing: 2;
+      padding-bottom: 0;
+      padding-top: 20px;
+    }
+  h1 {
+      font-weight: 700;
+  }
+  .headerLogo p{
+      font-size:14px;
+      font-weight: 300;
+    }
+  nav ul li a{
+    font-size:14px;
+    font-weight: 500;
+    border: solid 1px #ffffff;
+    border-radius: 25px;
+    padding: 7px 20px
+  }
+  .headerInner{
+    display: block;
+  }
+  nav ul {
+    margin-top: 28px;
+    justify-content: space-between;
+  }
+  nav ul.headerNav li a {
+    padding: 7px 20px;
+    border-radius: 25px;
+  }
+  main {
+    display: block;
+  }
+  .heroitems {
+     margin: 0px auto;
+     justify-content: center;
+     gap: 10px;
+  }
+  .heroleft {
+      width: 40%;
+      height: 40%;
+  }
+  .heroright {
+      width: 40%;
+      height: 40%;
+  }
+  .sectionworks {
+    padding-left: 0;
+  }
+  .sectionhello {
+    height: 500px;
+  }
+  .hellojapanese {
+    letter-spacing: 0;
+    line-height: 2.5;
+    font-style: italic;
+  }
+  .helloenglish {
+    letter-spacing: 0;
+    line-height: 1.6;
+    font-size: 14px;
+    font-style: italic;
+  }
+  button#btn {
+    margin-left: 10px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+  }
+  button#btnAll {
+    margin-left: 0px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .svgimg {
+    position: relative;
+    overflow: hidden;
+    transform: scale(-1,1);
+   }
+  .btnbox {
+    margin-top: 80px;
+    margin-bottom: 40px;
+   }
+}
+/* @media設定＝＝＝390px以下＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media screen and (max-width: 390px) {
+  header {
+    height: 130px;
+  }
+  .headerInner{
+    display: inline-block;
+  }
+  .headerLogo h1{
+      font-size:16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 16px;
+      padding-bottom: 0;
+      padding-top: 20px;
+    }
+  h1 {
+      font-weight: 500;
+    }
+  .headerLogo p {
+      font-size:14px;
+      font-weight: 300;
+      letter-spacing: 0px;
+      padding-top: 1px;
+      padding-left: 0px;
+      text-transform:capitalize;
+    }
+  nav ul {
+      margin-top: 35px;
+      justify-content: space-between;
+    }
+  nav ul.headerNav li a {
+    padding: 7px 14px;
+    border-radius: 25px;
+    }
+  .svgimg {
+    position: relative;
+    overflow: hidden;
+    padding-right: -7%;
+    margin-right: -7%;
+    transform: scale (-1, 1);
+    }
+}
+/*@media設定＝＝＝1220px以上＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media screen and (min-width: 1220px) {
+  .ttlbtns {
+    margin-top: -300px;
+    padding-left: -160px;
+  }
+  .svgimg {
+    position: relative;
+    overflow: hidden;
+    transform: scale (-1, 1);
+   }
+}

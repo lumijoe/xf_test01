@@ -1,0 +1,9 @@
+#####wpcomment_nojpdeny#####
+SetEnvIf Request_URI ".*" WpCommentDeny
+#####end:wpcomment_nojpdeny#####
+
+#####mime#####
+AddType image/svg+xml .svg
+AddType image/svg+xml .svgz
+AddEncoding gzip .svgz
+#####end:mime#####

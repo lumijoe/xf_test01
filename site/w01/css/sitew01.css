@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/* ボディ */
+body {
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+	font-size: 14px;
+  margin-top: 29px;
+  /* transform: scale(0.7, 0.7); */
+}
+.title h1, .title ul li {
+  margin-left: 14%;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+h1, p, ul, li, button, a {
+  color: #555;
+}
+/* ヘッダー */
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: end;
+}
+.logo {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.logoh1 {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  padding-left: 3px;
+  font-weight: 100;
+}
+.logop {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.imglogo {
+  max-width: 38px;
+  max-height: 39px;
+}
+/* ナビゲーション */
+.gnav ul {
+  display: flex;
+  gap: 16px
+}
+.gnav li {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+/* ヒーロー */
+.mainimg {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* コンテンツコンテナー */
+section.container {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  max-height: 226px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* buttons */
+.buttons {
+  width: 282px;
+  max-height: 226px;
+}
+.btn {
+  border: #63abd4 solid 2px;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  width: 282px;
+  height: 47px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  /* box-shadow: 1px 1px 1px rgba(0,0,0,0.3); 
+  border-radius: 5px; */
+}
+/* .btn:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0);
+} */
+button {
+  background-color: #f5fbff;
+}
+.buttons ul  {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btnicon {
+  padding-left: 15px;
+  padding-right:15px;
+}
+/* aside */
+aside {
+  width: 654px;
+  max-height: 226px;
+}
+.oshirase {
+  width: 100%;
+  height: 31px;
+  letter-spacing: 0.1em;
+}
+.gray {
+  width: 100%;
+  height: 39px;
+  background-color:#f5f5f5;
+}
+.white {
+  width: 100%;
+  height: 39px;
+  background-color:#ffffff;
+}
+span.day {
+  padding-left: 14px ;
+}
+.asideitem {
+  padding-left: 15px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.totop {
+  margin-top: 40px;
+  max-width: 960px;
+  display: flex;
+  margin-right:auto;
+  margin-left:auto;
+  justify-content: end;
+  letter-spacing: 0.1em;
+}
+.totop p {
+  background-color: #63abd4;
+  color: #ffffff; 
+  height: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+/* フッター */
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #63abd4;
+  padding-top: 19px;
+}
+.footerInner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: end;
+}
+.footermenu ul {
+  display: flex;
+  gap: 16px
+}
+.footermenu li {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+.footerlogoh1 {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  padding-left: 3px;
+  font-weight: 100;
+  color: #ffffff;
+}
+.footerlogop {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+}
+/* ナビゲーション */
+.footermenu ul {
+  display: flex;
+  gap: 16px
+}
+.footermenu li {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #ffffff;
+}
+.copy p{
+  color: #ffffff;
+  font-size: 12px;
+}
+
+/* カンプデザイン */
+section.comp {
+  margin-top: 140px;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+section.comp h1 {
+  color: #232323;
+}
+.compimg {
+  border: solid 1px #232323;
+}
+@media screen and (max-width: 1080px) {
+  body {
+    transform: scale(0.5, 0.5);
+  }
+  .compimg {
+    transform: scale(0.7, 0.7);
+  }
+}

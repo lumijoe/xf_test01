@@ -21,6 +21,32 @@
 <!-- ●● リセットCSSをCSSフォルダ仕様に -->
 <!-- ●● レスポンシブデザイン、@media？、ブレークポイント -->
 <!-- ●● リンク遷移 -->
+
+<!-- 新しいサイトへ誘導するPOP UP -->
+<style>
+  /* スタイルは必要に応じて調整してください */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 80%;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  </style>
+
 </head>
 <body>
 <!--ここからヘッダー↓----------->
@@ -41,6 +67,11 @@
   <!-- ここまでヘッダー↑ -->
   <!-- ここからメイン↓-->
  <main>
+  <div id="popupContainer" class="popup">
+    <p><br/>こちらのサイトはリニューアルしました<br/><br/>
+      <br/>新しいURLは<a href="https://next-testocober.vercel.app/"> https://next-testocober.vercel.app/ </a>です<br/><br/></p>
+  </div>
+  <div class="overlay"></div>
     <div class="areaHero">
        <div class="heroitems">
          <img class="heroleft" src="./assets/images/top/mv_heroleft.jpg"  width="265px" height="356px" alt="ピックアップ作品1。架空webサイト制作のデザイン画像。サーファーが立ち上げたエシカルな商品を扱う企業の設定。サイトのカラー構成は爽やかさやナチュラルをイメージした白がベースの背景に、ブログセクションと商品紹介セクションにそれぞれ写真が4枚と各タイトルと文章が構成されている。写真はウッドや海やビーチのベージュやブルー、商品パッケージに採用されている淡いグリーンやオレンジなど。ボタン色は淡いピンクからブルーパープルのグラデーション。">
@@ -126,6 +157,24 @@
     </section>
   </footer>
   <!-- ここまでフッター↑------------------>
+  <!-- POP UP JavaScript処理 -->
+  <script>
+    window.onload = function() {
+      var popup = document.getElementById('popupContainer');
+      var overlay = document.querySelector('.overlay');
+    
+      // ページ読み込み後、ポップアップとオーバーレイを表示
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    
+      // オーバーレイをクリックするとポップアップが閉じる
+      overlay.onclick = function() {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+      }
+    }
+    </script>
+
 </body>
 <!-- ここまでbody--------------------------->
 </html>

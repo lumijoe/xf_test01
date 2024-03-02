@@ -9,6 +9,7 @@
   <!--  favicon↓-->
   <link rel="icon" type="image/png" href="./assets/images/top/android-touch-icon.png" >
   <link rel="icon" type="image/png" href="./assets/images/top/favicon94.png" >
+ 
   
   <!--  resetcss↓-->
   <link rel="stylesheet" href="./assets/css/reset.css">
@@ -24,8 +25,8 @@
 
 <!-- 新しいサイトへ誘導するPOP UP -->
 <style>
-  /* スタイルは必要に応じて調整してください */
-  .popup {
+  /* JS Pop Up */
+  /* .popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -35,7 +36,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     max-width: 80%;
-  }
+  }*/
   .overlay {
     position: fixed;
     top: 0;
@@ -44,8 +45,27 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
+  } 
+  #popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
   }
-  </style>
+  #close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: large;
+    cursor: pointer;
+  }
+  
+</style>
 
 </head>
 <body>
@@ -67,11 +87,16 @@
   <!-- ここまでヘッダー↑ -->
   <!-- ここからメイン↓-->
  <main>
-  <div id="popupContainer" class="popup">
+  <!-- リニューアルサイトへの遷移の POP UP -->
+  <div id="popup-container" class="popup">
+      <span id="close-btn">&times;</span>
+
     <p><br/>こちらのサイトはリニューアルしました<br/><br/>
       <br/>新しいURLは<a href="https://next-testocober.vercel.app/"> https://next-testocober.vercel.app/ </a>です<br/><br/></p>
   </div>
   <div class="overlay"></div>
+  
+  <!-- ここからエリアヒーロー -->
     <div class="areaHero">
        <div class="heroitems">
          <img class="heroleft" src="./assets/images/top/mv_heroleft.jpg"  width="265px" height="356px" alt="ピックアップ作品1。架空webサイト制作のデザイン画像。サーファーが立ち上げたエシカルな商品を扱う企業の設定。サイトのカラー構成は爽やかさやナチュラルをイメージした白がベースの背景に、ブログセクションと商品紹介セクションにそれぞれ写真が4枚と各タイトルと文章が構成されている。写真はウッドや海やビーチのベージュやブルー、商品パッケージに採用されている淡いグリーンやオレンジなど。ボタン色は淡いピンクからブルーパープルのグラデーション。">
@@ -159,20 +184,34 @@
   <!-- ここまでフッター↑------------------>
   <!-- POP UP JavaScript処理 -->
   <script>
-    window.onload = function() {
-      var popup = document.getElementById('popupContainer');
-      var overlay = document.querySelector('.overlay');
+    // window.onload = function() {
+    //   var popup = document.getElementById('popupContainer');
+    //   var overlay = document.querySelector('.overlay');
     
-      // ページ読み込み後、ポップアップとオーバーレイを表示
-      popup.style.display = 'block';
-      overlay.style.display = 'block';
+    //   // ページ読み込み後、ポップアップとオーバーレイを表示
+    //   popup.style.display = 'block';
+    //   overlay.style.display = 'block';
     
-      // オーバーレイをクリックするとポップアップが閉じる
-      overlay.onclick = function() {
-        popup.style.display = 'none';
-        overlay.style.display = 'none';
-      }
-    }
+    //   // オーバーレイをクリックするとポップアップが閉じる
+    //   overlay.onclick = function() {
+    //     popup.style.display = 'none';
+    //     overlay.style.display = 'none';
+    //   }
+    // }
+    document.addEventListener("DOMContentLoaded", function() {
+    var popupContainer = document.getElementById("popup-container");
+    var closeBtn = document.getElementById("close-btn");
+    var overlay = document.querySelector('.overlay');
+
+    // ポップアップを閉じるためのイベントリスナーを追加
+    closeBtn.addEventListener("click", function() {
+      popupContainer.style.display = "none";
+    });
+
+    // ページ読み込み時にポップアップとオーバーレイを表示
+    popupContainer.style.display = "block";
+    overlay.style.display = 'block';
+  });
     </script>
 
 </body>
